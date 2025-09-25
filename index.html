@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farfetch-like</title>
+    <!-- Incluye el CDN de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header y Navegación -->
+    <header class="bg-[#0d0d0d] text-white py-4 px-6 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+        <div class="text-xl font-bold tracking-widest uppercase">
+            <a href="#">Marca</a>
+        </div>
+        <nav class="flex md:flex space-x-8 text-sm">
+            <a href="#nosotros" class="hover:text-gray-400">Nosotros</a>
+            <a href="#Proyectos" class="hover:text-gray-400">Proyectos</a>
+        
+        </nav>
+       
+    </header>
+
+    <!-- Sección de Héroe/Banner Principal -->
+    <section class="h-screen flex items-center justify-center text-center px-4 relative overflow-hidden">
+        <img src="https://placehold.co/1920x1080/1a1a1a/cccccc?text=Fondo+Inmersivo" alt="Fondo de moda" class="absolute inset-0 w-full h-full object-cover opacity-70">
+        <div class="relative z-10 p-6 rounded-xl">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide leading-tight">
+                Descubre el Estilo Único
+            </h1>
+            <p class="mt-4 md:text-xl font-light max-w-2xl mx-auto">
+                Las últimas colecciones de diseñadores de todo el mundo.
+            </p>
+            <button class="mt-8 px-8 py-3 bg-white text-black font-semibold uppercase rounded-full shadow-lg hover:bg-gray-200 transition-colors">
+                Comprar Ahora
+            </button>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 md:px-12" id="nosotros">
+        <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 uppercase">Nosotros</h2>
+        <img src="https://placehold.co/1920x1080/1a1a1a/cccccc?text=Fondo+Inmersivo" alt="Fondo de moda" class="absolute inset-0 w-full h-full object-cover opacity-70">
+        <div class="relative z-10 p-6 rounded-xl">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide leading-tight">
+                Descubre el Estilo Único
+            </h1>
+            <p class="mt-4 md:text-xl font-light max-w-2xl mx-auto">
+                Las últimas colecciones de diseñadores de todo el mundo.
+            </p>
+            <button class="mt-8 px-8 py-3 bg-white text-black font-semibold uppercase rounded-full shadow-lg hover:bg-gray-200 transition-colors">
+                Comprar Ahora
+            </button>
+        </div>
+    </section>
+
+    <!-- Sección de Productos/Colecciones -->
+    <section class="py-16 px-6 md:px-12" id="Proyectos">
+        <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 uppercase">Novedades</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Ejemplo de Tarjeta de Producto -->
+            <div class="group relative rounded-xl overflow-hidden shadow-lg bg-[#1a1a1a]">
+                <div class="relative w-full h-80 overflow-hidden">
+                    <img src="https://placehold.co/600x600/2a2a2a/969696?text=Producto+1" alt="Descripción del producto" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="text-lg font-semibold truncate">Nombre del Producto</h3>
+                    <p class="text-sm text-gray-400 mt-1">Diseñador/Marca</p>
+                    <p class="mt-2 text-xl font-bold">$250</p>
+                </div>
+            </div>
+            <div class="group relative rounded-xl overflow-hidden shadow-lg bg-[#1a1a1a]">
+                <div class="relative w-full h-80 overflow-hidden">
+                    <img src="https://placehold.co/600x600/2a2a2a/969696?text=Producto+2" alt="Descripción del producto" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="text-lg font-semibold truncate">Nombre del Producto</h3>
+                    <p class="text-sm text-gray-400 mt-1">Diseñador/Marca</p>
+                    <p class="mt-2 text-xl font-bold">$320</p>
+                </div>
+            </div>
+            <div class="group relative rounded-xl overflow-hidden shadow-lg bg-[#1a1a1a]">
+                <div class="relative w-full h-80 overflow-hidden">
+                    <img src="https://placehold.co/600x600/2a2a2a/969696?text=Producto+3" alt="Descripción del producto" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="text-lg font-semibold truncate">Nombre del Producto</h3>
+                    <p class="text-sm text-gray-400 mt-1">Diseñador/Marca</p>
+                    <p class="mt-2 text-xl font-bold">$180</p>
+                </div>
+            </div>
+            <div class="group relative rounded-xl overflow-hidden shadow-lg bg-[#1a1a1a]">
+                <div class="relative w-full h-80 overflow-hidden">
+                    <img src="https://placehold.co/600x600/2a2a2a/969696?text=Producto+4" alt="Descripción del producto" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="p-4 text-center">
+                    <h3 class="text-lg font-semibold truncate">Nombre del Producto</h3>
+                    <p class="text-sm text-gray-400 mt-1">Diseñador/Marca</p>
+                    <p class="mt-2 text-xl font-bold">$400</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-[#1a1a1a] py-12 px-6 md:px-12 text-gray-400 text-sm">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="font-semibold text-white mb-4">Ayuda y Contacto</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition-colors">Atención al cliente</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Preguntas frecuentes</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Política de devoluciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-4">Sobre Nosotros</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition-colors">Quiénes somos</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Trabaja con nosotros</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Responsabilidad social</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-4">Síguenos</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Facebook</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Twitter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-4">Newsletter</h4>
+                <p>Suscríbete para recibir novedades y ofertas exclusivas.</p>
+                <form class="mt-4 flex">
+                    <input type="email" placeholder="Tu correo electrónico" class="flex-grow bg-[#0d0d0d] border border-gray-600 rounded-l-md px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-white">
+                    <button type="submit" class="bg-white text-black rounded-r-md px-4 py-2 font-semibold hover:bg-gray-200 transition-colors">
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-gray-500">
+            &copy; 2025 Mi Marca. Todos los derechos reservados.
+        </div>
+    </footer>
+</body>
+</html>
