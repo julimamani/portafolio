@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -19,21 +20,24 @@
 </head>
 <body>
 
-    <!-- Header y Navegación -->
-    <header class="bg-[#0d0d0d] text-white py-4 px-6 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50">
-        <div class="text-xl font-bold tracking-widest uppercase">
-            <a href="#">Marca</a>
+<header class="bg-[#0d0d0d] text-white py-4 px-6 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+    <div class="text-xl font-bold tracking-widest uppercase">
+        <a href="#">Marca</a>
+    </div>
+    <nav>
+        <div class="flex md:flex space-x-8 text-sm">
+            <a href="#nosotros" class="hover:text-gray-400 transition-colors duration-300">Nosotros</a>
+            <a href="#habilidades" class="hover:text-gray-400 transition-colors duration-300">Habilidades</a>
+            <a href="#proyectos" class="hover:text-gray-400 transition-colors duration-300">Proyectos</a>
+            <a href="#contacto" class="hover:text-gray-400 transition-colors duration-300">Contacto</a>
         </div>
-        <nav class="flex md:flex space-x-8 text-sm">
-            <a href="#nosotros" class="hover:text-gray-400"> Nosotros </a>
-            <a href="#Proyectos" class="hover:text-gray-400"> Proyectos </a>
-            <a href="#contacto" class="hover:text-gray-400"> Contacto </a>
-        </nav>
-       
-    </header>
+    </nav>
+</header>
 
-    <!-- Sección de Héroe/Banner Principal -->
-    <section class="h-screen flex items-center justify-center text-center px-4 relative overflow-hidden">
+<main>
+
+    <!-- Sección de Héroe -->
+    <section id="inicio" class="h-screen flex items-center justify-center text-center px-4 relative overflow-hidden">
         <img src="https://placehold.co/1920x1080/1a1a1a/cccccc?text=Fondo+Inmersivo" alt="Fondo de moda" class="absolute inset-0 w-full h-full object-cover opacity-70">
         <div class="relative z-10 p-6 rounded-xl">
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide leading-tight">
@@ -48,103 +52,286 @@
         </div>
     </section>
 
-    <section class="py-16 px-6 md:px-12" id="nosotros">
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="py-20 md:py-24 px-6 md:px-12 relative">
         <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 uppercase">Nosotros</h2>
-        <img src="https://placehold.co/1920x1080/1a1a1a/cccccc?text=Fondo+Inmersivo" alt="Fondo de moda" class="absolute inset-0 w-full h-full object-cover opacity-70">
-        <div class="relative z-10 p-6 rounded-xl">
-            <p class="mt-4 md:text-xl font-light max-w-2xl mx-auto">
+        <div class="max-w-4xl mx-auto bg-[#1a1a1a] bg-opacity-50 backdrop-blur-sm p-8 rounded-xl">
+            <p class="md:text-lg font-light text-center leading-relaxed">
                 En Azalea nos enfocamos en desarrollar soluciones tecnológicas simples y accesibles, análisis funcionales, asesoramientos y propuestas creativas convencidos de que la digitalización es esencial en esta nueva era.
-Nuestro objetivo es ofrecer respuestas únicas y personalizadas a cada negocio, sin importar su tamaño, para que puedan aprovechar al máximo las oportunidades que brinda la tecnología.
-Ofrecemos un proceso integral y estructurado para garantizar el cumplimiento de los objetivos y necesidades del cliente de forma sólida y eficiente. Para ello usamos una metodología ágil buscando crear un dinamismo entre el cliente y nuestro equipo, que con una comunicación constante podamos llegar a las metas esperadas.
+                <br><br>
+                Nuestro objetivo es ofrecer respuestas únicas y personalizadas a cada negocio, sin importar su tamaño, para que puedan aprovechar al máximo las oportunidades que brinda la tecnología.
+                Ofrecemos un proceso integral y estructurado para garantizar el cumplimiento de los objetivos y necesidades del cliente de forma sólida y eficiente. Para ello usamos una metodología ágil buscando crear un dinamismo entre el cliente y nuestro equipo, que con una comunicación constante podamos llegar a las metas esperadas.
             </p>
-            
         </div>
     </section>
 
-    <!-- Sección de Productos/Colecciones -->
-    <section class="py-16 px-6 md:px-12" id="Proyectos">
-               <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 uppercase">Nuestros Proyectos</h2>
-        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
-            <!-- Contenido de la Imagen y Descripción -->
-            <div class="md:w-1/2">
-                <div class="rounded-xl overflow-hidden shadow-lg mb-6">
-                    <img src="https://placehold.co/800x600/2a2a2a/969696?text=Proyecto+Destacado" alt="Proyecto Destacado" class="w-full h-auto object-cover">
-                </div>
-                <div class="text-center md:text-left">
-                    <h3 class="text-2xl font-semibold mb-2">Proyecto de Diseño Web Moderno</h3>
-                    <p class="text-gray-300">
-                        Este proyecto se centró en la creación de una experiencia de usuario fluida y un diseño minimalista.
-                        Combinamos animaciones sutiles con una navegación intuitiva para ofrecer una plataforma atractiva y funcional.
-                    </p>
-                </div>
-            </div>
-    
-            <!-- Carrusel de Imágenes -->
-            <div class="md:w-1/2 w-full relative">
-                <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
-                    <div id="carousel-container" class="w-full h-full flex transition-transform duration-500 ease-in-out">
-                        <!-- Imágenes del carrusel -->
-                        <img src="https://placehold.co/800x600/1e1e1e/cccccc?text=Carrusel+1" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
-                        <img src="https://placehold.co/800x600/3d3d3d/cccccc?text=Carrusel+2" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0">
-                        <img src="https://placehold.co/800x600/5a5a5a/cccccc?text=Carrusel+3" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
+    <!-- Sección Habilidades -->
+    <section id="habilidades" class="py-20 md:py-24 px-6 md:px-12">
+        <h2 class="text-3xl md:text-4xl font-semibold text-center mb-16 uppercase">Habilidades</h2>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+            
+            <!-- Habilidades Técnicas -->
+            <div class="bg-[#1a1a1a] p-8 rounded-xl">
+                <h3 class="text-2xl font-semibold text-center mb-8">Habilidades Técnicas</h3>
+                <div class="grid grid-cols-3 sm:grid-cols-4 gap-6 text-center">
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-html5-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">HTML5</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-css3-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">CSS3</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-javascript-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">JavaScript</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-react-original colored text-4xl mb-2"></i><span class="text-sm font-medium">React</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-tailwindcss-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">Tailwind</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-nodejs-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">Node.js</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-express-original colored text-4xl mb-2"></i><span class="text-sm font-medium">Express</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-java-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">Java</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-dot-net-plain-wordmark colored text-4xl mb-2"></i><span class="text-sm font-medium">.NET</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-postgresql-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">PostgreSQL</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-mysql-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">MySQL</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-mongodb-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">MongoDB</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-git-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">Git</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-github-original colored text-4xl mb-2"></i><span class="text-sm font-medium">GitHub</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-docker-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">Docker</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-jenkins-line colored text-4xl mb-2"></i><span class="text-sm font-medium">Jenkins</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4 bg-[#0d0d0d] rounded-lg transition-transform hover:scale-110">
+                        <i class="devicon-kubernetes-plain colored text-4xl mb-2"></i><span class="text-sm font-medium">Kubernetes</span>
                     </div>
                 </div>
-                <!-- Botones de navegación del carrusel -->
-                <button id="prev-btn" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <button id="next-btn" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
+            </div>
+
+            <!-- Habilidades Blandas -->
+            <div class="bg-[#1a1a1a] p-8 rounded-xl">
+                <h3 class="text-2xl font-semibold text-center mb-8">Habilidades Blandas</h3>
+                <div class="flex items-center justify-center h-full">
+                    <ul class="list-disc list-inside text-gray-300 space-y-3 text-lg">
+                        <li>Comunicación Efectiva</li>
+                        <li>Trabajo en Equipo y Colaboración</li>
+                        <li>Resolución de Problemas</li>
+                        <li>Pensamiento Crítico</li>
+                        <li>Adaptabilidad y Flexibilidad</li>
+                        <li>Creatividad e Innovación</li>
+                        <li>Gestión del Tiempo y Priorización</li>
+                        <li>Atención al Detalle</li>
+                        <li>Orientación al Cliente</li>
+                        <li>Proactividad e Iniciativa</li>
+                        <li>Metodologías Ágiles (Scrum)</li>
+                        <li>Liderazgo</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Pie de Página -->
-    <footer class="bg-[#1a1a1a] py-12 px-6 md:px-12 text-gray-400 text-sm">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h4 class="font-semibold text-white mb-4">Ayuda y Contacto</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white transition-colors">Atención al cliente</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Preguntas frecuentes</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Política de devoluciones</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold text-white mb-4">Sobre Nosotros</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white transition-colors">Quiénes somos</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Trabaja con nosotros</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Responsabilidad social</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold text-white mb-4">Síguenos</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Facebook</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Twitter</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold text-white mb-4">Newsletter</h4>
-                <p>Suscríbete para recibir novedades y ofertas exclusivas.</p>
-                <form class="mt-4 flex">
-                    <input type="email" placeholder="Tu correo electrónico" class="flex-grow bg-[#0d0d0d] border border-gray-600 rounded-l-md px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-white">
-                    <button type="submit" class="bg-white text-black rounded-r-md px-4 py-2 font-semibold hover:bg-gray-200 transition-colors">
-                        Enviar
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="py-20 md:py-24 px-6 md:px-12 bg-[#1a1a1a]">
+        <h2 class="text-3xl md:text-4xl font-semibold text-center mb-16 uppercase">Nuestros Proyectos</h2>
+        
+        <!-- Grid de Proyectos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+
+            <!-- Proyecto 1 -->
+            <div class="flex flex-col items-center">
+                <div class="w-full relative mb-6">
+                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
+                        <div id="carousel-1" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <img src="https://placehold.co/800x600/2a2a2a/969696?text=Proyecto+1+-+Img+1" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="https://placehold.co/800x600/3d3d3d/cccccc?text=Proyecto+1+-+Img+2" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="https://placehold.co/800x600/5a5a5a/cccccc?text=Proyecto+1+-+Img+3" alt="Imagen del proyecto 1" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                    </div>
+                    <button id="prev-btn-1" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
                     </button>
-                </form>
+                    <button id="next-btn-1" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-2">Proyecto de Diseño Web Moderno</h3>
+                    <p class="text-gray-300 max-w-lg">Este proyecto se centró en la creación de una experiencia de usuario fluida y un diseño minimalista.</p>
+                </div>
             </div>
+
+            <!-- Proyecto 2 -->
+            <div class="flex flex-col items-center">
+                <div class="w-full relative mb-6">
+                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
+                        <div id="carousel-2" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <img src="https://placehold.co/800x600/2a2a2a/969696?text=Proyecto+2+-+Img+1" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="https://placehold.co/800x600/3d3d3d/cccccc?text=Proyecto+2+-+Img+2" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="https://placehold.co/800x600/5a5a5a/cccccc?text=Proyecto+2+-+Img+3" alt="Imagen del proyecto 2" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                    </div>
+                    <button id="prev-btn-2" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="next-btn-2" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-2">E-commerce para Marca de Ropa</h3>
+                    <p class="text-gray-300 max-w-lg">Desarrollo de una tienda online completa con pasarela de pagos y gestión de inventario.</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="flex flex-col items-center">
+                <div class="w-full relative mb-6">
+                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
+                        <div id="carousel-3" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <img src="https://placehold.co/800x600/2a2a2a/969696?text=Proyecto+3+-+Img+1" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="https://placehold.co/800x600/3d3d3d/cccccc?text=Proyecto+3+-+Img+2" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="https://placehold.co/800x600/5a5a5a/cccccc?text=Proyecto+3+-+Img+3" alt="Imagen del proyecto 3" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                    </div>
+                    <button id="prev-btn-3" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="next-btn-3" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-2">Aplicación Móvil de Fitness</h3>
+                    <p class="text-gray-300 max-w-lg">Una app para seguimiento de rutinas de ejercicio y progreso personal, con un diseño motivador.</p>
+                </div>
+            </div>
+
+            <!-- Proyecto 4 -->
+            <div class="flex flex-col items-center">
+                <div class="w-full relative mb-6">
+                    <div class="w-full h-96 overflow-hidden rounded-xl shadow-lg relative">
+                        <div id="carousel-4" class="w-full h-full flex transition-transform duration-500 ease-in-out">
+                            <img src="https://placehold.co/800x600/2a2a2a/969696?text=Proyecto+4+-+Img+1" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="https://placehold.co/800x600/3d3d3d/cccccc?text=Proyecto+4+-+Img+2" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                            <img src="https://placehold.co/800x600/5a5a5a/cccccc?text=Proyecto+4+-+Img+3" alt="Imagen del proyecto 4" class="w-full h-full object-cover flex-shrink-0">
+                        </div>
+                    </div>
+                    <button id="prev-btn-4" class="absolute top-1/2 -translate-y-1/2 left-4 p-2 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="next-btn-4" class="absolute top-1/2 -translate-y-1/2 right-4 p-2 rounded-full bg-white bg-opacity-30 hover:bg-opacity-50 transition-colors">
+                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-semibold mb-2">Dashboard de Análisis de Datos</h3>
+                    <p class="text-gray-300 max-w-lg">Plataforma interactiva para la visualización de métricas de negocio en tiempo real.</p>
+                </div>
+            </div>
+
         </div>
-        <div class="text-center mt-12 text-gray-500">
-            &copy; 2025 Mi Marca. Todos los derechos reservados.
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-20 md:py-24 px-6 md:px-12">
+        <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 uppercase">Contacto</h2>
+        <div class="max-w-3xl mx-auto text-center">
+            <p class="text-lg text-gray-300 mb-8">
+                ¿Tienes una idea o un proyecto en mente? ¡Hablemos! Estamos aquí para ayudarte a hacerla realidad.
+            </p>
+            <a href="mailto:contacto@marca.com" class="inline-block mt-4 px-10 py-4 bg-white text-black font-semibold uppercase rounded-full shadow-lg hover:bg-gray-200 transition-colors">
+                Enviar un Correo
+            </a>
         </div>
-    </footer>
+    </section>
+
+</main>
+
+<!-- Pie de Página -->
+<footer class="bg-[#1a1a1a] py-12 px-6 md:px-12 text-gray-400 text-sm">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div>
+            <h4 class="font-semibold text-white mb-4 uppercase tracking-wider">Marca</h4>
+            <p>Soluciones tecnológicas para la nueva era digital.</p>
+        </div>
+        <div>
+            <h4 class="font-semibold text-white mb-4 uppercase tracking-wider">Navegación</h4>
+            <ul class="space-y-2">
+                <li><a href="#nosotros" class="hover:text-white transition-colors">Nosotros</a></li>
+                <li><a href="#proyectos" class="hover:text-white transition-colors">Proyectos</a></li>
+                <li><a href="#contacto" class="hover:text-white transition-colors">Contacto</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-semibold text-white mb-4 uppercase tracking-wider">Síguenos</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">LinkedIn</a></li>
+                <li><a href="#" class="hover:text-white transition-colors">GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="text-center mt-12 pt-8 border-t border-gray-800 text-gray-500">
+        &copy; 2024 Marca. Todos los derechos reservados.
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Función para inicializar un carrusel
+        function initializeCarousel(carouselId) {
+            const carouselContainer = document.getElementById(`carousel-${carouselId}`);
+            const prevBtn = document.getElementById(`prev-btn-${carouselId}`);
+            const nextBtn = document.getElementById(`next-btn-${carouselId}`);
+            
+            if (!carouselContainer || !prevBtn || !nextBtn) return;
+
+            const slides = carouselContainer.children;
+            const totalSlides = slides.length;
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+        }
+
+        // Inicializar cada uno de los 4 carruseles
+        for (let i = 1; i <= 4; i++) {
+            initializeCarousel(i);
+        }
+    });
+</script>
+
 </body>
 </html>
