@@ -369,13 +369,18 @@
         </div>
 
         <!-- COLUMNA 2 (DERECHA): FORMULARIO -->
-        <div>
+         <div>
             <h4 class="font-semibold text-white mb-4 uppercase tracking-wider text-center md:text-left">Envíanos un Mensaje</h4>
-            <form action="#" method="POST" class="space-y-4 bg-[#0d0d0d] p-6 rounded-xl shadow-2xl">
-                <input type="text" name="nombre" placeholder="Nombre" class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors placeholder-gray-500">
-                <input type="email" name="email" placeholder="Email" class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors placeholder-gray-500">
-                <textarea name="mensaje" rows="4" placeholder="Mensaje" class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors placeholder-gray-500"></textarea>
-                 <button type="submit" class="w-full px-8 py-3 bg-white text-black font-semibold uppercase rounded-lg shadow-md hover:bg-gray-200 transition-colors tracking-wider transform hover:scale-[1.01] duration-300">
+            <form id="formularioDeContacto" action="#" method="POST" class="space-y-4 bg-[#0d0d0d] p-6 rounded-xl shadow-2xl">
+                <!-- Inputs con IDs añadidos para el JavaScript -->
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors placeholder-gray-500">
+                <input type="email" id="email" name="email" placeholder="Email" class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors placeholder-gray-500">
+                <textarea id="message" name="mensaje" rows="4" placeholder="Mensaje" class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors placeholder-gray-500"></textarea>
+                
+                <!-- Elemento para mostrar el estado/error (ID: estado) -->
+                <div id="estado" class="text-center font-medium min-h-[1.5rem] mt-2"></div>
+                
+                <button type="submit" class="w-full px-8 py-3 bg-white text-black font-semibold uppercase rounded-lg shadow-md hover:bg-gray-200 transition-colors tracking-wider transform hover:scale-[1.01] duration-300">
                     Enviar Mensaje
                 </button>
             </form>
@@ -401,10 +406,18 @@
     <button id="close-modal" class="absolute top-4 right-6 text-white text-5xl font-bold hover:text-gray-300 transition-colors z-10">&times;</button>
 </div>
 
-
+<!-- BLOQUE SCRIPT ÚNICO Y COMBINADO -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Función para inicializar un carrusel
+        
+        // ==========================================================
+        // 1. LÓGICA DEL CARRUSEL Y MODAL (Primer Script del Usuario)
+        // ==========================================================
+
+        /**
+         * Inicializa la funcionalidad de navegación de un carrusel específico.
+         * NOTA: Los elementos HTML del carrusel deben ser añadidos al DOM para que esto funcione.
+         */
         function initializeCarousel(carouselId) {
             const carouselContainer = document.getElementById(`carousel-${carouselId}`);
             const prevBtn = document.getElementById(`prev-btn-${carouselId}`);
@@ -437,16 +450,17 @@
             });
         }
 
-        // Inicializar cada uno de los 4 carruseles
+        // Inicializar cada uno de los 4 carruseles (Si existen)
         for (let i = 1; i <= 4; i++) {
             initializeCarousel(i);
         }
 
-        // Lógica para el modal de imagen
+        // Lógica para el modal de imagen (Ahora que el HTML existe)
         const imageModal = document.getElementById('image-modal');
         const modalImage = document.getElementById('modal-image');
         const modalContent = document.getElementById('modal-content');
         const closeModalBtn = document.getElementById('close-modal');
+        // Busca imágenes que coincidan con la estructura original (asumiendo que estaban en una cuadrícula)
         const carouselImages = document.querySelectorAll('.grid-cols-1.md\\:grid-cols-2 .w-full.h-96 img');
 
         function openModal(src) {
@@ -457,7 +471,7 @@
         function closeModal() {
             imageModal.classList.add('hidden');
             modalImage.classList.remove('zoomed'); // Resetear zoom al cerrar
-            modalImage.src = ''; // Limpiar src para evitar cargas innecesarias
+            modalImage.src = ''; // Limpiar src
         }
 
         carouselImages.forEach(img => {
@@ -482,11 +496,58 @@
 
         // Cerrar modal con la tecla Escape
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !imageModal.classList.contains('hidden')) {
+            if (e.key === 'Escape' && imageModal && !imageModal.classList.contains('hidden')) {
                 closeModal();
             }
         });
 
+        // ==========================================================
+        // 2. LÓGICA DEL FORMULARIO DE CONTACTO (Segundo Script del Usuario)
+        // ==========================================================
+
+        const formulario = document.getElementById("formularioDeContacto");
+        const estado = document.getElementById("estado");
+        const baseClasses = "text-center font-medium min-h-[1.5rem] mt-2"; // Clases base para el mensaje de estado
+
+        if (!formulario || !estado) {
+            console.warn("ADVERTENCIA: Formulario de contacto o elemento de estado no encontrado. La función de contacto no se inicializó.");
+            return;
+        }
+
+        function mandoElFormulario(event) {
+            event.preventDefault();
+
+            // Obtener valores y limpiar espacios en blanco
+            const name = document.getElementById("nombre").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const mensaje = document.getElementById("message").value.trim();
+            const elEmailEsValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Resetear el estado visual a las clases base
+            estado.textContent = "";
+            estado.className = baseClasses;
+
+            if (!name || !email || !mensaje) {
+                estado.textContent = "Por favor, complete todos los campos";
+                estado.className = `error ${baseClasses}`;
+                return;
+            }
+            if (!elEmailEsValido.test(email)) {
+                estado.textContent = "Email inválido. Verifique el formato.";
+                estado.className = `error ${baseClasses}`;
+                return;
+            }
+
+            // Simulación de envío exitoso
+            console.log("¡Éxito! Formulario validado correctamente y envío simulado."); // Log de éxito
+            estado.textContent = "Mensaje enviado con éxito. ¡Gracias!";
+            estado.className = `ok ${baseClasses}`;
+            
+            // Limpiar el formulario
+            formulario.reset();
+        }
+
+        formulario.addEventListener("submit", mandoElFormulario);
     });
 </script>
 
